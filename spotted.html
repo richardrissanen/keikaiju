@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotted — Kei.Social</title>
+<meta name="description" content="Kei cars spotted and invited to the Kei.Social club.">
+<style>
+:root{
+  --ink:#0a0a0c;
+  --concrete:#2b3036;
+  --mauve:#cdb9c2;
+  --yellow:#fed12c;
+  --red:#d8231c;
+  --paper:#f4f1ea;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:Georgia,'Times New Roman',serif;
+  line-height:1.55;
+}
+h1,h2,.brand{
+  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+a{color:var(--yellow)}
+
+/* header */
+header{
+  background:var(--ink);
+  border-bottom:3px solid var(--red);
+  position:sticky;
+  top:0;
+  z-index:9;
+}
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:760px;
+  margin:0 auto;
+  padding:1rem 1.5rem;
+}
+.brand{font-size:1.6rem;color:var(--paper);text-decoration:none}
+.brand span{color:var(--yellow)}
+.join-btn{
+  background:var(--yellow);
+  color:var(--ink);
+  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding:.6rem 1.4rem;
+  border-radius:2px;
+  letter-spacing:.05em;
+}
+.join-btn:hover{background:var(--red);color:var(--paper)}
+
+/* sections */
+section{padding:3.5rem 1.5rem;max-width:760px;margin:0 auto}
+section h2{
+  font-size:clamp(1.6rem,4vw,2.4rem);
+  color:var(--yellow);
+  border-bottom:3px solid var(--red);
+  display:inline-block;
+  padding-bottom:.2rem;
+  margin-bottom:1.2rem;
+}
+section p{color:var(--mauve);font-size:1.05rem;max-width:62ch}
+.alt{background:var(--concrete)}
+
+/* call to action / join */
+#join{
+  background:var(--ink);
+  border-top:3px solid var(--yellow);
+  text-align:center;
+}
+#join h2{border-color:var(--yellow)}
+#join p{margin:0 auto 1.5rem}
+form{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+  justify-content:center;
+  max-width:480px;
+  margin:0 auto;
+}
+input[type=email]{
+  flex:1 1 240px;
+  padding:.8rem 1rem;
+  border:2px solid var(--mauve);
+  border-radius:2px;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Georgia,serif;
+  font-size:1rem;
+}
+button{
+  flex:0 0 auto;
+  background:var(--red);
+  color:var(--paper);
+  border:none;
+  padding:.8rem 1.6rem;
+  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  font-size:1rem;
+  border-radius:2px;
+  cursor:pointer;
+}
+button:hover{background:var(--yellow);color:var(--ink)}
+
+/* spotted gallery */
+.spotted-photo{
+  width:100%;
+  height:auto;
+  display:block;
+  border:3px solid var(--mauve);
+  border-radius:2px;
+}
+.spotted-card{margin-bottom:2rem}
+.spotted-card p{
+  font-style:italic;
+  margin-top:.6rem;
+  font-size:.95rem;
+}
+
+footer{
+  text-align:center;
+  padding:1.5rem;
+  color:var(--concrete);
+  font-size:.85rem;
+}
+
+@media (max-width:480px){
+  .brand{font-size:1.2rem}
+  .join-btn{padding:.5rem 1rem;font-size:.9rem}
+  section{padding:2.5rem 1.1rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="index.html">KEI<span>.</span>SOCIAL</a>
+    <a class="join-btn" href="#join">Join</a>
+  </div>
+</header>
+
+<section>
+  <h2>Spotted!</h2>
+  <p>Kei cars we've spotted out in the wild and invited to the club. Keep an eye out — yours could be next.</p>
+</section>
+
+<section id="join" class="alt">
+  <h2>Join the Club</h2>
+  <p>Drop your email and we'll let you know about the next meetup, drive-in, or show.</p>
+  <form action="#join" method="get">
+    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+    <button type="submit">Sign me up</button>
+  </form>
+</section>
+
+<section>
+  <div class="spotted-card">
+    <img class="spotted-photo" src="https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg" alt="Lineup of kei cars spotted under a parking structure" width="2000" height="1333">
+    <p>Spotted: a row of kei legends, parked up and ready for their close-up.</p>
+  </div>
+</section>
+
+<footer>&copy; 2026 Kei.Social — built by enthusiasts, for enthusiasts.</footer>
+
+</body>
+</html>

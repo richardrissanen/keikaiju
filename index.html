@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kei.Social — A club for kei car people</title>
+<meta name="description" content="Kei.Social is a club for kei car owners and fans: meetups, drive-ins, car shows, and wrenching together.">
+<style>
+:root{
+  --ink:#0a0a0c;
+  --concrete:#2b3036;
+  --mauve:#cdb9c2;
+  --yellow:#fed12c;
+  --red:#d8231c;
+  --paper:#f4f1ea;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:Georgia,'Times New Roman',serif;
+  line-height:1.55;
+}
+h1,h2,.brand{
+  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+a{color:var(--yellow)}
+
+/* header */
+header{
+  background:var(--ink);
+  border-bottom:3px solid var(--red);
+  position:sticky;
+  top:0;
+  z-index:9;
+}
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:760px;
+  margin:0 auto;
+  padding:1rem 1.5rem;
+}
+.brand{font-size:1.6rem;color:var(--paper);text-decoration:none}
+.brand span{color:var(--yellow)}
+.join-btn{
+  background:var(--yellow);
+  color:var(--ink);
+  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding:.6rem 1.4rem;
+  border-radius:2px;
+  letter-spacing:.05em;
+}
+.join-btn:hover{background:var(--red);color:var(--paper)}
+
+/* banner */
+.banner{
+  position:relative;
+  height:60vh;
+  min-height:320px;
+  background:url('https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg') center 60%/cover no-repeat var(--concrete);
+}
+.banner::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,10,12,.15),rgba(10,10,12,.85));
+}
+.banner-text{
+  position:absolute;
+  bottom:1.5rem;left:0;right:0;
+  z-index:1;
+  max-width:760px;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+.banner-text h1{
+  font-size:clamp(2.2rem,7vw,4.2rem);
+  color:var(--paper);
+  text-shadow:0 0 18px var(--red);
+}
+.banner-text p{
+  font-style:italic;
+  color:var(--mauve);
+}
+
+/* sections */
+section{padding:3.5rem 1.5rem;max-width:760px;margin:0 auto}
+section h2{
+  font-size:clamp(1.6rem,4vw,2.4rem);
+  color:var(--yellow);
+  border-bottom:3px solid var(--red);
+  display:inline-block;
+  padding-bottom:.2rem;
+  margin-bottom:1.2rem;
+}
+section p{color:var(--mauve);font-size:1.05rem;max-width:62ch}
+.alt{background:var(--concrete)}
+
+/* call to action / join */
+#join{
+  background:var(--ink);
+  border-top:3px solid var(--yellow);
+  text-align:center;
+}
+#join h2{border-color:var(--yellow)}
+#join p{margin:0 auto 1.5rem}
+form{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+  justify-content:center;
+  max-width:480px;
+  margin:0 auto;
+}
+input[type=email]{
+  flex:1 1 240px;
+  padding:.8rem 1rem;
+  border:2px solid var(--mauve);
+  border-radius:2px;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Georgia,serif;
+  font-size:1rem;
+}
+button{
+  flex:0 0 auto;
+  background:var(--red);
+  color:var(--paper);
+  border:none;
+  padding:.8rem 1.6rem;
+  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  font-size:1rem;
+  border-radius:2px;
+  cursor:pointer;
+}
+button:hover{background:var(--yellow);color:var(--ink)}
+
+footer{
+  text-align:center;
+  padding:1.5rem;
+  color:var(--concrete);
+  font-size:.85rem;
+}
+
+@media (max-width:480px){
+  .brand{font-size:1.2rem}
+  .join-btn{padding:.5rem 1rem;font-size:.9rem}
+  section{padding:2.5rem 1.1rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#top" id="top">KEI<span>.</span>SOCIAL</a>
+    <a class="join-btn" href="#join">Join</a>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="banner-text">
+    <h1>Small cars. Big club.</h1>
+    <p>Kei trucks, vans, and tiny sports cars — and the people who keep them running.</p>
+  </div>
+</div>
+
+<section>
+  <h2>Our Mission</h2>
+  <p>Kei.Social exists to bring kei car owners and fans together — to socialize, swap stories and parts, and help each other keep these little legends on the road. Whether you've got a Cappuccino, an AZ-1, a Hijet, or you just love everything about the 660cc world, there's a seat for you here.</p>
+</section>
+
+<section class="alt">
+  <h2>Drive-Ins &amp; Car Shows</h2>
+  <p>We organize regular drive-ins, casual meetups, and trips to local car shows so members can show off their builds, trade tips, and just enjoy the cars together. No car too small, no mod too weird — if it's kei, it belongs in the lineup.</p>
+</section>
+
+<section id="join">
+  <h2>Join the Club</h2>
+  <p>Drop your email and we'll let you know about the next meetup, drive-in, or show.</p>
+  <form action="#join" method="get">
+    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+    <button type="submit">Sign me up</button>
+  </form>
+</section>
+
+<footer>&copy; 2026 Kei.Social — built by enthusiasts, for enthusiasts.</footer>
+
+</body>
+</html>
