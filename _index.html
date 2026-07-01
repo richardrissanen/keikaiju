@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spotted: Kei.Social</title>
-<meta name="description" content="Kei cars spotted and invited to the Kei.Social club.">
+<title>Kei.Social: A club for kei car people</title>
+<meta name="description" content="Kei.Social is a club for kei car owners and fans: meetups, drive-ins, car shows, and wrenching together.">
 <style>
 :root{
   --ink:#0a0a0c;
@@ -58,6 +58,36 @@ header{
   letter-spacing:.05em;
 }
 .join-btn:hover{background:var(--red);color:var(--paper)}
+
+/* banner */
+.banner{
+  position:relative;
+  height:60vh;
+  min-height:320px;
+  background:url('https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg') center 60%/cover no-repeat var(--concrete);
+}
+.banner::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,10,12,.15),rgba(10,10,12,.85));
+}
+.banner-text{
+  position:absolute;
+  bottom:1.5rem;left:0;right:0;
+  z-index:1;
+  max-width:760px;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+.banner-text h1{
+  font-size:clamp(2.2rem,7vw,4.2rem);
+  color:var(--paper);
+  text-shadow:0 0 18px var(--red);
+}
+.banner-text p{
+  font-style:italic;
+  color:var(--mauve);
+}
 
 /* sections */
 section{padding:3.5rem 1.5rem;max-width:760px;margin:0 auto}
@@ -113,21 +143,6 @@ button{
 }
 button:hover{background:var(--yellow);color:var(--ink)}
 
-/* spotted gallery */
-.spotted-photo{
-  width:100%;
-  height:auto;
-  display:block;
-  border:3px solid var(--mauve);
-  border-radius:2px;
-}
-.spotted-card{margin-bottom:2rem}
-.spotted-card p{
-  font-style:italic;
-  margin-top:.6rem;
-  font-size:.95rem;
-}
-
 footer{
   text-align:center;
   padding:1.5rem;
@@ -151,12 +166,24 @@ footer{
   </div>
 </header>
 
+<div class="banner">
+  <div class="banner-text">
+    <h1>Small cars. Big Fun.</h1>
+    <p>Kei trucks, vans, and tiny sports cars, and the people who keep them running.</p>
+  </div>
+</div>
+
 <section>
-  <h2>Spotted!</h2>
-  <p>Kei cars we've spotted out in the wild and invited to the club. Keep an eye out, yours could be next.</p>
+  <h2>Our Mission</h2>
+  <p>Keikaiju exists to bring kei car enthusiasts together. We socialize, swap stories, and help each other keep these little strange beasts on the road.</p>
 </section>
 
-<section id="join" class="alt">
+<section class="alt">
+  <h2>Drive-Ins &amp; Car Shows</h2>
+  <p>We organize regular drive-ins, casual meetups, and trips to local car shows so members can show off their builds, trade tips, and just enjoy the cars together. No car is too small, and no mod is too weird. If it's kei, it belongs in the lineup.</p>
+</section>
+
+<section id="join">
   <h2>Join the Club</h2>
   <p>Drop your email and we'll let you know about the next meetup, drive-in, or show.</p>
   <form action="#join" method="get">
@@ -165,14 +192,7 @@ footer{
   </form>
 </section>
 
-<section>
-  <div class="spotted-card">
-    <img class="spotted-photo" src="https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg" alt="Lineup of kei cars spotted under a parking structure" width="2000" height="1333">
-    <p>Spotted: a row of kei legends, parked up and ready for their close-up.</p>
-  </div>
-</section>
-
-<footer>&copy; 2026 Kei.Social. Built by enthusiasts, for enthusiasts.</footer>
+<footer>&copy; 2026 KeiKaiju.com Built by enthusiasts, for enthusiasts.</footer>
 
 </body>
 </html>
