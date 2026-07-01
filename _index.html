@@ -3,182 +3,123 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kei.Social: A club for kei car people</title>
-<meta name="description" content="Kei.Social is a club for kei car owners and fans: meetups, drive-ins, car shows, and wrenching together.">
+<title>Keikaiju</title>
+<meta name="description" content="Keikaiju is a car club for kei car enthusiasts.">
 <style>
-:root{
-  --ink:#0a0a0c;
-  --concrete:#2b3036;
-  --mauve:#cdb9c2;
-  --yellow:#fed12c;
-  --red:#d8231c;
-  --paper:#f4f1ea;
-}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--ink);
-  color:var(--paper);
+  background:#0a0a0c; 
+  color:#f4f1ea ;
   font-family:Georgia,'Times New Roman',serif;
+  font-size:1.05rem;
   line-height:1.55;
-}
-h1,h2,.brand{
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  letter-spacing:.03em;
-  text-transform:uppercase;
-}
-a{color:var(--yellow)}
-
-/* header */
-header{
-  background:var(--ink);
-  border-bottom:3px solid var(--red);
-  position:sticky;
-  top:0;
-  z-index:9;
-}
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  max-width:760px;
-  margin:0 auto;
-  padding:1rem 1.5rem;
-}
-.brand{font-size:1.6rem;color:var(--paper);text-decoration:none}
-.brand span{color:var(--yellow)}
-.join-btn{
-  background:var(--yellow);
-  color:var(--ink);
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  text-transform:uppercase;
-  text-decoration:none;
-  padding:.6rem 1.4rem;
-  border-radius:2px;
-  letter-spacing:.05em;
-}
-.join-btn:hover{background:var(--red);color:var(--paper)}
-
-/* banner */
-.banner{
-  position:relative;
-  height:60vh;
-  min-height:320px;
-  background:url('https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg') center 60%/cover no-repeat var(--concrete);
-}
-.banner::after{
-  content:"";
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(10,10,12,.15),rgba(10,10,12,.85));
-}
-.banner-text{
-  position:absolute;
-  bottom:1.5rem;left:0;right:0;
-  z-index:1;
   max-width:760px;
   margin:0 auto;
   padding:0 1.5rem;
+  min-height:100vh;
 }
-.banner-text h1{
-  font-size:clamp(2.2rem,7vw,4.2rem);
-  color:var(--paper);
-  text-shadow:0 0 18px var(--red);
+h1,h2,nav{
+  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.04em;
 }
-.banner-text p{
-  font-style:italic;
-  color:var(--mauve);
-}
+a{color:#f4f1ea;}
 
-/* sections */
-section{padding:3.5rem 1.5rem;max-width:760px;margin:0 auto}
-section h2{
-  font-size:clamp(1.6rem,4vw,2.4rem);
-  color:var(--yellow);
-  border-bottom:3px solid var(--red);
-  display:inline-block;
-  padding-bottom:.2rem;
-  margin-bottom:1.2rem;
-}
-section p{color:var(--mauve);font-size:1.05rem;max-width:62ch}
-.alt{background:var(--concrete)}
-
-/* call to action / join */
-#join{
-  background:var(--ink);
-  border-top:3px solid var(--yellow);
-  text-align:center;
-}
-#join h2{border-color:var(--yellow)}
-#join p{margin:0 auto 1.5rem}
-form{
+nav{
   display:flex;
-  flex-wrap:wrap;
-  gap:.75rem;
-  justify-content:center;
-  max-width:480px;
-  margin:0 auto;
+  justify-content:space-between;
+  align-items:baseline;
+  padding:1rem 0;
+  border-bottom:4px solid #0a0a0c;
 }
+nav .site{font-size:1.4rem}
+nav a{text-decoration:none;font-size:1rem}
+nav a:hover{text-decoration:underline}
+
+img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.hero{
+  padding:1.5rem 0 1rem;
+}
+.hero h1{
+  font-size:clamp(3.5rem,12vw,7rem);
+  line-height:.92;
+  letter-spacing:-.01em;
+}
+.hero p{
+  font-size:1.1rem;
+  margin-top:.6rem;
+  font-style:italic;
+}
+
+section{padding:2rem 0;}
+section h2{
+  font-size:clamp(1.4rem,4vw,1.9rem);
+  margin-bottom:.75rem;
+  background:#fed12c;
+  color: #0a0a0c;
+  display:inline;
+  padding:0 .25rem;
+}
+section p{max-width:60ch}
+
+#join{padding:2rem 0}
+#join h2{background:#d8231c;color:#0a0a0c; padding:0 .25rem}
+#join p{margin:.75rem 0 1.25rem;max-width:60ch}
+form{display:flex;flex-wrap:wrap;gap:.5rem}
 input[type=email]{
-  flex:1 1 240px;
-  padding:.8rem 1rem;
-  border:2px solid var(--mauve);
-  border-radius:2px;
-  background:var(--paper);
-  color:var(--ink);
+  flex:1 1 220px;
+  padding:.7rem .9rem;
+  border:3px solid #f4f1ea;
+  background:#0a0a0c; 
   font-family:Georgia,serif;
   font-size:1rem;
 }
 button{
-  flex:0 0 auto;
-  background:var(--red);
-  color:var(--paper);
-  border:none;
-  padding:.8rem 1.6rem;
+  padding:.7rem 1.4rem;
+  background:#f4f1ea ;
+  color:#0a0a0c; 
+  border:3px solid #0a0a0c;
   font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
   text-transform:uppercase;
-  letter-spacing:.05em;
   font-size:1rem;
-  border-radius:2px;
+  letter-spacing:.05em;
   cursor:pointer;
 }
-button:hover{background:var(--yellow);color:var(--ink)}
+button:hover{background:#fed12c;color:#f4f1ea }
 
 footer{
-  text-align:center;
-  padding:1.5rem;
-  color:var(--concrete);
-  font-size:.85rem;
-}
-
-@media (max-width:480px){
-  .brand{font-size:1.2rem}
-  .join-btn{padding:.5rem 1rem;font-size:.9rem}
-  section{padding:2.5rem 1.1rem}
+  padding:1rem 0;
+  font-size:.8rem;
+  border-top:4px solid #0a0a0c;
+  margin-top:0;
 }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <a class="brand" href="#top" id="top">KeiKaiju<span>.</span>com</a>
-    <a class="join-btn" href="#join">Join</a>
-  </div>
-</header>
+<nav></nav>
 
-<div class="banner">
-  <div class="banner-text">
-    <h1>Small cars. Big Fun.</h1>
-    <p>Kei trucks, vans, and tiny sports cars, and the people who keep them running.</p>
-  </div>
+<img src="https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg"
+     alt="A row of kei cars parked under a concrete structure"
+     width="2000" height="1333">
+
+<div class="hero">
+  <h1>Keikaiju</h1>
+  <p>Small cars. Big fun.</p>
 </div>
 
 <section>
   <h2>Our Mission</h2>
-  <p>Keikaiju exists to bring kei car enthusiasts together. We socialize, swap stories, and help each other keep these little strange beasts on the road.</p>
+  <p>Keikaiju is a car club that brings kei car enthusiasts together. We socialize, swap stories, and help each other keep these little strange beasts on the road.</p>
 </section>
 
-<section class="alt">
+<section>
   <h2>Drive-Ins &amp; Car Shows</h2>
   <p>We organize regular drive-ins, casual meetups, and trips to local car shows so members can show off their builds, trade tips, and just enjoy the cars together. No car is too small, and no mod is too weird. If it's kei, it belongs in the lineup.</p>
 </section>
@@ -192,7 +133,7 @@ footer{
   </form>
 </section>
 
-<footer>&copy; 2026 KeiKaiju.com Built by enthusiasts, for enthusiasts.</footer>
+<footer>&copy; 2026 Keikaiju.com. Built by enthusiasts, for enthusiasts.</footer>
 
 </body>
 </html>
