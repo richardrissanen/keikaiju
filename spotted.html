@@ -3,176 +3,131 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spotted: Kei.Social</title>
-<meta name="description" content="Kei cars spotted and invited to the Kei.Social club.">
+<title>Spotted: Keikaiju</title>
+<meta name="description" content="Kei cars spotted in the wild and invited to the club.">
 <style>
-:root{
-  --ink:#0a0a0c;
-  --concrete:#2b3036;
-  --mauve:#cdb9c2;
-  --yellow:#fed12c;
-  --red:#d8231c;
-  --paper:#f4f1ea;
-}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--ink);
-  color:var(--paper);
-  font-family:Georgia,'Times New Roman',serif;
-  line-height:1.55;
+background:#0a0a0c;
+color:#f4f1ea;
+font-family:Georgia,'Times New Roman',serif;
+font-size:1.05rem;
+line-height:1.55;
+max-width:760px;
+margin:0 auto;
+padding:0 1.5rem;
+min-height:100vh;
 }
-h1,h2,.brand{
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  letter-spacing:.03em;
-  text-transform:uppercase;
+h1,h2,nav{
+font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+text-transform:uppercase;
+letter-spacing:.04em;
 }
-a{color:var(--yellow)}
-
-/* header */
-header{
-  background:var(--ink);
-  border-bottom:3px solid var(--red);
-  position:sticky;
-  top:0;
-  z-index:9;
+a{color:#f4f1ea}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:baseline;
+padding:1rem 0;
 }
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  max-width:760px;
-  margin:0 auto;
-  padding:1rem 1.5rem;
+nav .site{font-size:1.4rem}
+nav a{text-decoration:none;font-size:1rem}
+nav a:hover{text-decoration:underline}
+img{
+display:block;
+width:100%;
+height:auto;
 }
-.brand{font-size:1.6rem;color:var(--paper);text-decoration:none}
-.brand span{color:var(--yellow)}
-.join-btn{
-  background:var(--yellow);
-  color:var(--ink);
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  text-transform:uppercase;
-  text-decoration:none;
-  padding:.6rem 1.4rem;
-  border-radius:2px;
-  letter-spacing:.05em;
+.hero{padding:1.5rem 0 1rem}
+.hero h1{
+font-size:clamp(3.5rem,12vw,7rem);
+line-height:.92;
+letter-spacing:-.01em;
 }
-.join-btn:hover{background:var(--red);color:var(--paper)}
-
-/* sections */
-section{padding:3.5rem 1.5rem;max-width:760px;margin:0 auto}
+.hero p{
+font-size:1.1rem;
+margin-top:.6rem;
+font-style:italic;
+}
+section{padding:1.1rem 0}
 section h2{
-  font-size:clamp(1.6rem,4vw,2.4rem);
-  color:var(--yellow);
-  border-bottom:3px solid var(--red);
-  display:inline-block;
-  padding-bottom:.2rem;
-  margin-bottom:1.2rem;
+font-size:clamp(1.4rem,4vw,1.9rem);
+margin-bottom:.75rem;
+background:#fed12c;
+color:#0a0a0c;
+display:inline;
+padding:0 .25rem;
 }
-section p{color:var(--mauve);font-size:1.05rem;max-width:62ch}
-.alt{background:var(--concrete)}
-
-/* call to action / join */
-#join{
-  background:var(--ink);
-  border-top:3px solid var(--yellow);
-  text-align:center;
-}
-#join h2{border-color:var(--yellow)}
-#join p{margin:0 auto 1.5rem}
-form{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.75rem;
-  justify-content:center;
-  max-width:480px;
-  margin:0 auto;
-}
+section p{max-width:60ch;margin-bottom:1.1rem}
+.caption{font-style:italic;font-size:.9rem;margin-top:.5rem;margin-bottom:1.5rem;color:#cdb9c2}
+#join{padding:1.1rem 0}
+#join h2{background:#d8231c;color:#0a0a0c;padding:0 .25rem}
+#join p{margin:.75rem 0 1.25rem;max-width:60ch}
+form{display:flex;flex-wrap:wrap;gap:.5rem}
 input[type=email]{
-  flex:1 1 240px;
-  padding:.8rem 1rem;
-  border:2px solid var(--mauve);
-  border-radius:2px;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:Georgia,serif;
-  font-size:1rem;
+flex:1 1 220px;
+padding:.7rem .9rem;
+border:3px solid #f4f1ea;
+background:#0a0a0c;
+color:#f4f1ea;
+font-family:Georgia,serif;
+font-size:1rem;
+}
+input:focus{
+border-color:#fed12c;
+outline:#fed12c;
 }
 button{
-  flex:0 0 auto;
-  background:var(--red);
-  color:var(--paper);
-  border:none;
-  padding:.8rem 1.6rem;
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  font-size:1rem;
-  border-radius:2px;
-  cursor:pointer;
+padding:.7rem 1.4rem;
+background:#f4f1ea;
+color:#0a0a0c;
+border:3px solid #f4f1ea;
+font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+text-transform:uppercase;
+font-size:1rem;
+letter-spacing:.05em;
+cursor:pointer;
 }
-button:hover{background:var(--yellow);color:var(--ink)}
-
-/* spotted gallery */
-.spotted-photo{
-  width:100%;
-  height:auto;
-  display:block;
-  border:3px solid var(--mauve);
-  border-radius:2px;
+button:hover{
+background:#fed12c;
+border:3px solid #fed12c;
+color:#0a0a0c;
 }
-.spotted-card{margin-bottom:2rem}
-.spotted-card p{
-  font-style:italic;
-  margin-top:.6rem;
-  font-size:.95rem;
-}
-
 footer{
-  text-align:center;
-  padding:1.5rem;
-  color:var(--concrete);
-  font-size:.85rem;
-}
-
-@media (max-width:480px){
-  .brand{font-size:1.2rem}
-  .join-btn{padding:.5rem 1rem;font-size:.9rem}
-  section{padding:2.5rem 1.1rem}
+padding:1rem 0;
+font-size:.8rem;
+border-top:4px solid #f4f1ea;
 }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <a class="brand" href="#top" id="top">KeiKaiju<span>.</span>com</a>
-    <a class="join-btn" href="#join">Join</a>
-  </div>
-</header>
+<nav>
+  <a class="site" href="index.html">Keikaiju</a>
+  <a href="#join">Join</a>
+</nav>
+
+<div class="hero">
+  <h1>Spotted</h1>
+  <p>Kei cars we've found in the wild.</p>
+</div>
 
 <section>
-  <h2>Spotted!</h2>
-  <p>Kei cars we've spotted out in the wild and invited to the club. Keep an eye out, yours could be next.</p>
+  <img src="./images/awhkei.jpg" alt="A shot of a Honda Beat at EMMEET" width="2000" height="1333">
+  <p class="caption">A shot of a Honda Beat at EMMEET</p>
 </section>
 
-<section id="join" class="alt">
+<section id="join">
   <h2>Join the Club</h2>
-  <p>Drop your email and we'll let you know about the next meetup, drive-in, or show.</p>
-  <form action="#join" method="get">
-    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+  <p>Drop your email and we'll let you know about our next event.</p>
+  <form action="https://buttondown.com/api/emails/embed-subscribe/keikaiju" method="post" class="embeddable-buttondown-form">
+    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" id="bd-email">
     <button type="submit">Sign me up</button>
   </form>
 </section>
 
-<section>
-  <div class="spotted-card">
-    <img class="spotted-photo" src="https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg" alt="Lineup of kei cars spotted under a parking structure" width="2000" height="1333">
-    <p>Spotted: a row of kei legends, parked up and ready for their close-up.</p>
-  </div>
-</section>
-
-<footer>&copy; 2026 Kei.Social. Built by enthusiasts, for enthusiasts.</footer>
+<footer>&copy; 2026 Keikaiju.com. Built by enthusiasts, for enthusiasts.</footer>
 
 </body>
 </html>
