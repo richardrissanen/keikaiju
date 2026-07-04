@@ -3,115 +3,138 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Keikaiju.com - Coming Soon</title>
-<meta name="description" content="Keikaiju exists to bring kei car enthusiasts together. Coming soon.">
+<title>Keikaiju</title>
+<meta name="description" content="Keikaiju is a car club for kei car enthusiasts.">
 <style>
-:root{
-  --ink:#0a0a0c;
-  --mauve:#cdb9c2;
-  --yellow:#fed12c;
-  --red:#d8231c;
-  --paper:#f4f1ea;
-}
 *{box-sizing:border-box;margin:0;padding:0}
-body,html{height:100%}
+html{scroll-behavior:smooth}
 body{
-  font-family:Georgia,'Times New Roman',serif;
-  color:var(--paper);
-  background:var(--ink)
-    url('https://i.pinimg.com/originals/ab/69/c8/ab69c8dd62a2dfe5f9453901c73d2724.jpg')
-    center 60%/cover no-repeat;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+background:#0a0a0c;
+color:#f4f1ea;
+font-family:Georgia,'Times New Roman',serif;
+font-size:1.05rem;
+line-height:1.55;
+max-width:760px;
+margin:0 auto;
+padding:0 1.5rem;
+min-height:100vh;
 }
-body::before{
-  content:"";
-  position:fixed;inset:0;
-  background:linear-gradient(160deg,rgba(10,10,12,.72) 40%,rgba(10,10,12,.88));
+h1,h2,nav{
+font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+text-transform:uppercase;
+letter-spacing:.04em;
 }
-main{
-  position:relative;
-  text-align:center;
-  padding:2rem 1.5rem;
-  max-width:600px;
-  width:100%;
+a{color:#f4f1ea}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:baseline;
+padding:1rem 0;
 }
-h1{
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-  font-size:clamp(3rem,12vw,6.5rem);
-  line-height:1;
-  color:var(--paper);
-  text-shadow:0 0 32px var(--red);
+nav .site{font-size:1.4rem}
+nav a{text-decoration:none;font-size:1rem}
+nav a:hover{text-decoration:underline}
+img{
+display:block;
+width:100%;
+height:auto;
 }
-h1 span{color:var(--yellow)}
-.kicker{
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  font-size:clamp(.7rem,2vw,.95rem);
-  color:var(--red);
-  margin-bottom:1rem;
+.hero{
+padding:1.5rem 0 1rem;
 }
-p{
-  color:var(--mauve);
-  font-size:clamp(1rem,2.5vw,1.15rem);
-  line-height:1.6;
-  max-width:44ch;
-  margin:1.4rem auto 2rem;
+.hero h1{
+font-size:clamp(3.5rem,12vw,7rem);
+line-height:.92;
+letter-spacing:-.01em;
 }
-form{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.75rem;
-  justify-content:center;
+.hero p{
+font-size:1.1rem;
+margin-top:.6rem;
+font-style:italic;
 }
+section{padding:1.1rem 0}
+section h2{
+font-size:clamp(1.4rem,4vw,1.9rem);
+margin-bottom:.75rem;
+background:#fed12c;
+color:#0a0a0c;
+display:inline;
+padding:0 .25rem;
+}
+section p{max-width:60ch}
+#join{padding:1.1rem 0}
+#join h2{background:#d8231c;color:#0a0a0c;padding:0 .25rem}
+#join p{margin:.75rem 0 1.25rem;max-width:60ch}
+form{display:flex;flex-wrap:wrap;gap:.5rem}
 input[type=email]{
-  flex:1 1 220px;
-  padding:.8rem 1rem;
-  border:2px solid var(--mauve);
-  border-radius:2px;
-  background:rgba(244,241,234,.1);
-  color:var(--paper);
-  font-family:Georgia,serif;
-  font-size:1rem;
+flex:1 1 220px;
+padding:.7rem .9rem;
+border:3px solid #f4f1ea;
+background:#0a0a0c;
+color:#f4f1ea;
+font-family:Georgia,serif;
+font-size:1rem;
 }
-input[type=email]::placeholder{color:var(--mauve)}
+input:focus {
+  border-color: #fed12c;
+  outline: #fed12c;
+}
 button{
-  flex:0 0 auto;
-  background:var(--yellow);
-  color:var(--ink);
-  border:none;
-  padding:.8rem 1.6rem;
-  font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  font-size:1rem;
-  border-radius:2px;
-  cursor:pointer;
+padding:.7rem 1.4rem;
+background:#f4f1ea;
+color:#0a0a0c;
+border:3px solid #f4f1ea;
+font-family:Impact,'Arial Narrow Bold','Arial Black',sans-serif;
+text-transform:uppercase;
+font-size:1rem;
+letter-spacing:.05em;
+cursor:pointer;
 }
-button:hover{background:var(--red);color:var(--paper)}
+button:hover{
+  background:#fed12c;
+  border:3px solid #fed12c;
+  color:#0a0a0c;
+}
 footer{
-  margin-top:2.5rem;
-  font-size:.8rem;
-  color:var(--mauve);
-  opacity:.5;
+padding:1rem 0;
+font-size:.8rem;
+border-top:4px solid #f4f1ea;
 }
 </style>
 </head>
 <body>
-<main>
-  <p class="kicker">Coming Soon</p>
+<nav></nav>
+<img src="./images/kei-cars.jpg" alt="A row of kei cars parked under a concrete structure" width="2000" height="1333">
+<div class="hero">
   <h1>Keikaiju</h1>
-  <p>Keikaiju is a car club that brings kei car enthusiasts together. We organize drive-ins, attend meets, and help each other keep these little strange beasts on the road.</p>
-  <form action="#" method="get">
-    <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-    <button type="submit">Notify me</button>
+  <p>Small cars. Big fun.</p>
+</div>
+<section>
+  <h2>Mission</h2>
+  <p>Keikaiju is a new car club that brings kei enthusiasts together. We socialize, swap stories, and help each other keep these little strange beasts on the road.</p>
+</section>
+<section>
+  <h2>Invasions</h2>
+  <p>We organize regular meetups and drive-ins to our local car shows so members can show off their builds, trade tips, and enjoy their kei cars together. </p>
+</section>
+<section id="join">
+  <h2>Join the Club</h2>
+  <p>Drop your email and we'll let you know about our next event.</p>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/keikaiju"
+    method="post"
+    class="embeddable-buttondown-form"
+  >
+    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" id="bd-email" >
+    <button type="submit">Sign me up</button>
   </form>
-  <footer>keikaiju.com</footer>
-</main>
+  <form
+  action="https://buttondown.com/api/emails/embed-subscribe/keikaiju"
+  method="post"
+  class="embeddable-buttondown-form"
+>
+</form>
+</section>
+<footer>&copy; 2026 Keikaiju.com. Built by enthusiasts, for enthusiasts.</footer>
 </body>
 </html>
