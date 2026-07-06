@@ -95,6 +95,9 @@ font-size:.8rem;
 border-top:4px solid #f4f1ea;
 }
 @media (max-width: 600px) {
+  body {
+    padding:0 0.5rem;
+  }
   form {
     flex-direction: column;
   }
