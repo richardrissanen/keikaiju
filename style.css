@@ -57,10 +57,10 @@ section p{max-width:60ch}
 #join{padding:1.1rem 0}
 #join h2{background:#d8231c;color:#0a0a0c;padding:0 .25rem}
 #join p{margin:.75rem 0 1.25rem;max-width:60ch}
-form{display:flex;flex-wrap:nowrap;gap:.5rem}
+form {display:flex;flex-wrap:wrap;gap:.5rem; }
 input[type=email]{
 flex:1 1 0;
-min-width:0;
+min-width: 66%;
 padding:.7rem .9rem;
 border:3px solid #f4f1ea;
 background:#0a0a0c;
@@ -73,6 +73,7 @@ input:focus {
   outline: #fed12c;
 }
 button{
+flex: 0 0 auto;
 padding:.7rem 1.4rem;
 background:#f4f1ea;
 color:#0a0a0c;
@@ -92,4 +93,7 @@ footer{
 padding:1rem 0;
 font-size:.8rem;
 border-top:4px solid #f4f1ea;
+}
+@supports (min-width: 0) { /* always true; just a scoping trick */
+  button { align-self: stretch; }
 }
